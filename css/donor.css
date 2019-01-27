@@ -1,0 +1,621 @@
+body{
+    background-color: #f1f2f6 !important;
+}
+
+/* NAVBAR */
+
+.navbar{
+    border-bottom: 8px solid #ff9f43;
+}
+
+.navbar a{
+    margin-top: 5px
+}
+.navbar .navbar-brand #doctor-name{
+    font-family: 'Righteous', cursive;
+    font-size: 38px;
+}
+
+.navbar .navbar-brand small{
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+    font-style: italic;
+}
+
+#profileName{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#profileLink:hover{
+    text-decoration: none;
+}
+
+.navbar .collapse ul li a:hover{
+    text-decoration: none;
+    transition: ease-in 0.5s;
+    color: #fff !important
+}
+
+/* NAVBAR */
+
+
+/* POST CONTAINER  */
+
+#postContainer{
+    background-color:#ffffff;
+    margin-top: 2%;
+    border-radius:14px !important;
+    padding:28px;
+}
+
+#msj{
+    font-size: 19px;
+    font-family: 'Sintony', sans-serif;
+    color: #a4b0be !important;
+    
+}
+
+#postBtn{
+    font-size:19px;
+    color: #1e90ff;
+    cursor: pointer;
+    font-weight: 450
+}
+
+#postBtn:hover{
+   color:  #778ca3
+}
+
+/* POST CONTAINER END */
+
+
+
+/* post modal */
+
+.modal .modal-dialog .modal-content .modal-header{
+    background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    padding: 20px;
+}
+
+.modal-title{
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Sintony', sans-serif;
+}
+
+#postBtn2{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* post modal */
+
+
+
+/* HEADING */
+
+.donorIntro{
+    font-family: 'Ubuntu', sans-serif;
+    color: #273c75;
+    font-weight: bold
+}
+
+/* HEADING END */
+
+/* CARD */
+
+.container-fluid .container .row .col-sm-4 .card .card-body {
+    min-height: 460px;
+}
+
+.container-fluid .container .row  .col-sm-4{
+    margin-bottom: 47px;
+}
+
+.container-fluid .container .row  .col-sm-4 .card{
+    border: none;
+    background-color: #000;
+    transition: 1s;
+}
+
+.container-fluid .container .row  .col-sm-4 .card .card-body{
+    background-color: #fff !important;
+}
+
+.container-fluid .container .row  .col-sm-4 .card .card-body .name{
+    margin-top: 5%;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 13%;
+    text-transform: capitalize;
+    color: #70a1ff;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.container-fluid .container .row .col-sm-4 .card .img-box img{
+   transition:  0.9s;
+}
+
+.container-fluid .container .row  .col-sm-4 .card:hover .img-box img{
+    opacity: 0.5;
+}
+
+.container-fluid .container .row  .col-sm-4 .card:hover .header h1{
+    color:#ff4757;
+}
+
+.container-fluid .container .row  .col-sm-4 .card:hover .header{
+    border-bottom:4px #ff4757 solid;
+    border-top:4px #ff4757 solid;
+}
+
+.container-fluid .container .row  .col-sm-4 .card:hover .name{
+    color: #1e90ff;
+}
+
+.col-sm-4{
+    margin-bottom: 7% !important;
+}
+
+
+.header{
+    border-bottom:4px #2ed573 solid;
+    border-top:4px #2ed573 solid;
+    margin-left:-5%;
+    margin-right:-5%;
+    margin-top:-16px;
+    margin-bottom:9%;
+    border-top-right-radius:4px;
+    border-top-left-radius:4px;
+    transition: 0.4s;
+
+}
+
+.header h1{
+    color:#2ed573;
+    text-transform:capitalize;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 0.5s;
+}
+
+.para{
+    text-transform: capitalize;
+    font-weight: bold;
+    margin-left:2px;
+    font-size:16px;
+    color: #57606f !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.link{
+    cursor: pointer;
+
+}
+
+.link:hover,
+.link2:hover{
+    text-decoration: none;
+}
+
+.donorList{
+    list-style-type: none;
+    
+}
+.donorList li{
+    margin-top:10%;
+    margin-bottom:5%;
+    margin-left:-55px;
+    font-size: 18px;
+}
+
+
+/* CARD END */
+
+
+
+/* loader */
+
+.container-flux{
+    display: block;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.container-flux .box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-flux .box span{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.s1{
+    animation:  s1  1s infinite;
+    background-color: #0097e6;
+}
+
+.s2{
+    animation:  s2  1s infinite;
+    background-color: #e84118;
+}
+
+.s3{
+    animation:  s3  1s infinite;
+    background-color: #4cd137;
+}
+
+@keyframes s1{
+    25%{
+        transform: scale(1)
+    }
+
+    50%{
+        transform: scale(1.2)
+    }
+
+    75%{
+        transform: scale(1)
+    }
+
+    100%{
+        transform: scale(1)
+    }
+}
+
+@keyframes s2{
+    25%{
+        transform: scale(1)
+    }
+
+    50%{
+        transform: scale(1)
+    }
+
+    75%{
+        transform: scale(1.2)
+    }
+
+    100%{
+        transform: scale(1)
+    }
+}
+
+@keyframes s3{
+    25%{
+        transform: scale(1)
+    }
+
+    50%{
+        transform: scale(1)
+    }
+
+    75%{
+        transform: scale(1.2)
+    }
+
+    100%{
+        transform: scale(1)
+    }
+}
+
+/* loader end */
+
+
+
+
+/* go to upper btn */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    background-color: #ddd;
+    width: 24px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #00000070;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(125deg, #0f2027, #203a43, #2c5364);
+    border-radius: 5px;
+}
+
+
+#goToBtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 15px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffb142;
+    line-height: 50px;
+    opacity: 0.7;
+    transition: ease-in 0.3s
+}
+
+#goToBtn:hover{
+    
+    opacity: 1;
+}
+
+/* go to btn end */
+
+
+
+
+
+/* POST */
+
+#acceptorImg{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+.accepName{
+    position: absolute;
+    top:30px;
+    font-size: 21px;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    color: #3498db;
+    line-height: -30%;
+}
+
+.address{
+    font-size: 13px;
+    font-family: 'Poppins', sans-serif;
+    color: #808e9b
+}
+
+.btn-group{
+    float:right;
+    position: relative;
+    top: 8px;
+    color: #b2bec3
+}
+
+.alert{
+    max-width: 290px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.dropDownUl{
+    list-style-type:none;
+    margin-left:-20%;
+}
+
+.dropDownUl li{
+    font-weight: 400;
+    margin-bottom: 10%
+}
+
+/* moreDetailDiv */
+.moreDetailDiv{
+    margin-top: 5%;
+    max-width:100%;
+    text-align: justify;
+    word-spacing: 1px;
+    line-height: 1.5;
+    font-style: normal;
+}
+
+.moreDetailDiv p{
+    word-break: break-all;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* list */
+.listDiv{
+    background: linear-gradient(135deg, rgb(6, 81, 112) 0%, rgb(107, 207, 239) 100%);
+    padding: 20px 0px 20px 0px;
+    border-radius: 17px;
+}
+
+.listDiv .listHeader {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.listDiv hr{
+    background-color:#bdc3c7;
+    size:1px;
+    width: 93%;
+}
+
+.listDiv h3{
+    color:#fff;
+    margin-left: 4%;
+}
+
+.listDiv ul{
+    list-style-type:none;
+}
+
+.listDiv ul li .counter{
+    font-size:17px;
+    border-radius:30px;
+    padding: 10px 17px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.listDiv ul li .detailLabel{
+    font-size:16px;
+    color:#fff;
+    font-family: 'Righteous', cursive;
+    text-transform: uppercase;
+}
+
+.listDiv ul li .patientDetail{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* POST END */
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    
+    #profileImg{
+        width:80px !important;
+        height: 80px !important;
+        background-color: #2ed573;
+        border-radius: 150% !important;
+    }
+
+    .collapse .navbar-nav{
+        margin-top:7%
+    }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    
+    .navbar a{
+        margin-top: 5%
+    }
+    
+    .para{
+        font-size: 14px;
+    }
+
+    .navbar .navbar-brand #doctor-name{
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+
+    #logoutBtn{
+        margin-left: 0% !important;
+    }
+
+
+    #profileImg{
+        width:80px !important;
+        height:80px !important;
+        background-color: #2ed573;
+    }
+
+    .collapse .navbar-nav{
+        margin-top:15%
+    }
+
+    .collapse .navbar-nav li{
+        margin-top:5%
+    }
+
+
+    #msj{
+        font-size: 15px;
+        margin-left: -4%;
+        
+    }
+    
+    #postBtn{
+        font-size:15px;
+        margin-right: -4%
+    }
+
+    .navbar .navbar-brand small{
+        font-weight: normal;
+        font-size: 14px
+    }
+    
+    .donorIntro{
+        font-size: 26px;
+        margin-bottom:7% !important
+    }
+
+
+    /* POST */
+
+    #acceptorImg{
+        width: 70px;
+        height: 70px;
+    }
+    
+    .accepName{
+        position: absolute;
+        top:22px;
+        font-size: 19px;
+        font-weight: 600;
+        font-family: 'Ubuntu', sans-serif;
+        color: #3498db;
+        line-height: -30%;
+    }
+    
+    .address{
+        font-size: 11px;
+        font-family: 'Poppins', sans-serif;
+        color: #808e9b
+    }
+    
+    .alert{
+        margin-top:17px;
+        max-width: 180px;
+        padding: 2% 2%;
+    }
+    
+    .dropDownUl li{
+        font-weight: 400;
+        font-size: 13px;
+    }
+    
+    .listDiv ul li{
+        margin-left: -36px
+    }
+    
+    .listDiv ul li .counter{
+        font-size: 14px;
+        border-radius:30px;
+        padding: 3px 10px !important;
+    }
+    
+    .listDiv ul li .detailLabel{
+        font-size:16px;
+    }
+    
+    .listDiv ul li .patientDetail{
+        font-size: 15px;
+    }
+
+    .moreDetailDiv{
+        margin-top: 10%
+    }
+
+
+
+    /* POST END */
+}

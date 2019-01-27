@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:600|Poppins:500|Righteous|Ubuntu+Condensed|Ubuntu:700" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    
+    <title>Sign up</title>
+</head>
+
+
+<body style="background-color:#ff7f50;margin-bottom: 40%">
+    <div class="container-fluid text-center">
+        <h1 class="next" style="color:#fff">asan Foundation</h1>
+        <br />
+
+        <h3 class="next2">Sign up</h3>
+        <div id="container" class="container shadow-lg bg-dark mb-5 p-3 rounded">
+                <div class="progress bg-primary" style="margin-top: -1.5% !important">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Profile complete Status 0%</div>
+                </div>
+            <div class="img-container">
+                <img id="img" class="input shadow-lg  mb-5 p-3 bg-white" src="../images/user.png" alt="user" />
+            </div>
+
+            <div class="form-group text-left next3">
+                <label class="form-label" for="firstName">First Name</label>
+                <input type="text" onFocus="allClear('firstNameError')" class="input" id="firstName" placeholder="First Name">
+                <small id="firstNameError"></small>
+            </div>
+
+            <div class="form-group text-left next3">
+                <label class="form-label" for="lastName">Last Name</label>
+                <input type="text" onFocus="allClear('lastNameError')" class="input" id="lastName" placeholder="Last Name">
+                <small id="lastNameError"></small>
+            </div>
+
+            <div class="form-group text-left next3">
+                    <label class="form-label" for="profession">Profession</label>
+                    <select id="profession" class="input form-control form-control-lg" onBlur="" onFocus="allClear('professionError')">
+                        <option value="">Choose</option>
+                        <option value="Bussiness man">Bussiness man</option>
+                        <option value="Student">Student</option>
+                        <option value="Employee">Employee</option>
+                        <option value="Other">other</option>
+                    </select>
+    
+                    <small id="professionError"></small>
+
+            </div>
+
+            <div class="form-group text-left">
+                    <label class="form-label" for="bloodGroup">Blood Group</label>
+                    <select id="bloodGroup" class="input form-control form-control-lg" onBlur="" onFocus="allClear('bloodGroupError')">
+                        <option value="">Choose</option>
+                        <option value="A+">A+</option>
+                        <option value="B+">B+</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+    
+                    <small id="bloodGroupError"></small>
+
+            </div>
+
+            <div class="form-group col-sm-12 text-left">
+                <label class="form-label" for="acType">Account Type</label>
+                <select id="acType" class="input form-control form-control-lg" onFocus="allClear('acTypeError')">
+                    <option value="">Choose</option>
+                    <option value="acceptor">Acceptor</option>
+                    <option value="donor">Donor</option>
+                </select>
+                <small id="acTypeError"></small>
+            </div>
+
+
+
+
+
+            <button type="button" id="signupBtn1" class="btn btn-lg btn-default nextBtn" onClick="signup1()">
+                Next <i class="fas fa-arrow-right"></i>
+        </button>
+
+        </div>
+
+
+
+
+        <!-- loader -->
+        <div class="container-flux" id="loader">
+            <div class="box">
+                <span class="s1"></span>
+                <span class="s2"></span>
+                <span class="s3"></span>
+                <br />
+                <h4 class="" style="color:#000; font-size: 21px">Processing...</h4>
+            </div>
+        </div>
+        <!-- loader -->
+        
+    <!-- js file -->
+    <script src="../src/authentication.js"></script>
+
+    
+
+    <!-- scroll reveal -->
+    <script>
+        ScrollReveal({ duration: 1000 })
+        ScrollReveal().reveal('.next')
+        ScrollReveal().reveal('.next2', { delay: 1000 })
+        ScrollReveal().reveal('#container', { delay: 1300 })
+        ScrollReveal().reveal('.progress', { delay: 1700 })
+        ScrollReveal().reveal('#img', { delay: 2300 })
+    </script>
+
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

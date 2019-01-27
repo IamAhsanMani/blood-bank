@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/acceptor.css">
+
+    <!-- prevnt browser not to go back -->
+    <script type="text/javascript" >
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+        history.go(1);
+        };
+    </script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Coiny|Exo+2:600|Montserrat|Poppins:400,500|Righteous|Sintony|Ubuntu+Condensed|Ubuntu:500,700" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    
+    <title>Timeline</title>
+</head>
+<body>
+        <nav id="top" class="navbar navbar-expand-lg navbar-light bg-light" style="padding-top: 20px;padding-bottom: 20px;background: linear-gradient(to left, #0f2027, #203a43, #2c5364)!important; border-bottom:#fc5c65 6px solid">
+            <a class="navbar-brand" id="header" href="#" style="line-height:15px"><span id="doctor-name"><span style="color:#fff">asan</span> <span style="color:#fc5c65">Foundation<sup><i class="far fa-registered" style="font-size:10px; color: #fff"></i></sup></span></span><small style="color:#2ed573"><br />Save life...</small></a>
+            <button class="navbar-toggler" style="margin-top:15px; margin-bottom:15px;color: #fff !important;background-color: #fc5c65;border: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                <a href="./userInfo.html" id="profileLink">
+                    <span style="font-size:24px;text-transform:capitalize; color:#fff !important;" id="profileName"></span>
+                    <img src="" id="profileImg" alt="" style="width:80px;height:80px; background-color: #eccc68;border-radius: 50%;padding: 5px;">
+                </a>
+                </li>
+                <li class="nav-item">
+                    <a class="" id="logoutBtn" style="font-size: 18px; line-height: 70px; margin-left: 12px; color: #eccc68; cursor: pointer;" onClick="logOut()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+
+        <!-- loader -->
+        <div class="container-flux text-center" id="loader">
+            <div class="box">
+                <span class="s1"></span>
+                <span class="s2"></span>
+                <span class="s3"></span>
+                <br />
+                <h4 style="color:#2C3A47; font-family: 'Righteous', cursive;">Loading...</h4>
+            </div>
+        </div>
+
+        <!-- CREATE POST CONTAINER -->
+        <div class="p-2">
+            <div class="container shadow-sm bg-white rounded" id="postContainer">
+                <span class="text-muted" id="msj"></span>
+                <a class="float-right" id="postBtn" data-toggle="modal" data-target="#exampleModal">Create Request</a>
+            </div>
+        </div>
+
+        <!-- div to show your post -->
+        <div class="container-fluid">
+            <div class="container" style="margin-top:6%">
+                <h1 class="donorIntro text-center" style="margin-bottom:3%">Your Posts</h1>
+                <div class="row" id="post"></div>
+            </div>
+        </div>
+
+        <!-- show donor list -->
+        <div class="container-fluid text-center">
+            <div class="container" style="margin-top:10%">
+                <h1 class="donorIntro" style="margin-bottom:6%">Available Donors</h1>
+                <div class="row" id="showDonor"></div>
+            </div>
+        </div>
+    
+    
+        
+
+        <!-- Modal to create post -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create Request</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="clearModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group text-left">
+                        <small class="text-info float-right inputInfo"><i class="fas fa-info-circle text-info"></i> Paitent FullName</small>
+                        <input type="text" onFocus="allClear('exportorNameError')" class="form-control form-control-lg" id="exportorName" placeholder="Exportor FullName">
+                        <small id="exportorNameError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <small class="text-info float-right inputInfo"><i class="fas fa-info-circle text-info"></i> Paitent Gender</small>
+                        <select id="exportorGender" class="form-control form-control-lg" onFocus="allClear('exportorGenderError')">
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <small id="exportorGenderError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <small class="text-info float-right inputInfo"><i class="fas fa-info-circle text-info"></i> Paitent age</small>
+                        <input type="text" onFocus="allClear('exportorAgeError')" class="form-control form-control-lg" id="exportorAge" placeholder="Exportor Age">
+                        <small id="exportorAgeError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <small class="text-info float-right inputInfo"><i class="fas fa-info-circle text-info"></i> Paitent Address</small>
+                        <input type="text" onFocus="allClear('locationError')" class="form-control form-control-lg" id="location" placeholder="Location">
+                        <small id="locationError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <small class="text-info float-right inputInfo"><i class="fas fa-info-circle text-info"></i> Additional information about Patient</small>
+                        <textarea class="form-control form-control-lg"  onFocus="allClear('moreDetailError')" id="moreDetail" rows="4" placeholder="More Details... (Min 80 chars)"></textarea>
+                        <small id="moreDetailError" class="text-danger"></small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="closeBtn" class="btn btn-secondary shadow-lg bg-secondary rounded" data-dismiss="modal" onClick="clearModal()">CLOSE</button>
+                    <a class="text-primary" style="cursor:pointer" id="postBtn2" onClick="createPost()">Post</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+  
+        <!-- Modal to edit post -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Post</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick="clearModal()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group text-left">
+                        <input type="text" onFocus="allClear('editNameError')" class="form-control form-control-lg" id="editName" placeholder="Exportor FullName">
+                        <small id="editNameError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <select id="editGender" class="form-control form-control-lg" onFocus="allClear('editGenderError')">
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <small id="editGenderError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <input type="text" onFocus="allClear('editAgeError')" class="form-control form-control-lg" id="editAge" placeholder="Exportor Age">
+                        <small id="editAgeError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <input type="text" onFocus="allClear('editLocationError')" class="form-control form-control-lg" id="editLocation" placeholder="Location">
+                        <small id="editLocationError" class="text-danger"></small>
+                    </div>
+
+                    <div class="form-group text-left">
+                        <textarea class="form-control form-control-lg"  onFocus="allClear('editMoreDetailError')" id="editMoreDetail" rows="4" placeholder="More Details... (Min 120 chars)"></textarea>
+                        <small id="editMoreDetailError" class="text-danger"></small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a id="closeBtn2" class="closeBtn text-secondary" data-dismiss="modal" onClick="">CANCEL</a>
+                    <a class="update text-primary" style="cursor:pointer" id="update" onClick="update(this)">UPDATE</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+        <!-- go to top btn -->
+        <a id="goToBtn" href="#top"><i class="fas fa-arrow-up"></i></a>
+
+
+
+    <!-- js file -->    
+    <script src="../src/acceptor.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

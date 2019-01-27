@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- prevnt browser not to go back -->
+    <script type="text/javascript" >
+        history.pushState(null, null, location.href);
+        window.onpopstate = function () {
+        history.go(-4);
+        };
+    </script>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:600|Montserrat|Poppins:500|Righteous|Ubuntu+Condensed|Ubuntu:700" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+    
+    <title>Sign in</title>
+</head>
+<body style="background-color:#ff7f50;margin-bottom: 40%">
+    <div class="container-fluid text-center">
+        <h1 class="next" style="color:#fff">asan Foundation</h1>
+        <br />
+
+        <h3 class="next2">Sign in</h3>
+        <div id="container" class="container shadow-lg bg-dark mb-5 p-3 rounded">
+            <div class="img-container">
+                <img id="img" class=" shadow-lg  mb-5 p-3 bg-white" src="../images/user.png" alt="user" />
+            </div>
+
+            <div class="form-group text-left next3">
+                <input type="email" onBlur="" onFocus="allClear('signInEmailError')" style="text-transform:lowercase;" class="inputs" id="signInEmail" placeholder="Email e.g, name@example.com">
+                <small id="signInEmailError"></small>
+            </div>
+
+            <div class="form-group text-left next4">
+                <input type="password" onBlur="" onFocus="allClear('signInPasswordError')" class="inputs" id="signInPassword" placeholder="Password">
+                <small id="signInPasswordError"></small>
+            </div>
+            <br />
+            <small id="otherError"></small>
+            <br />
+            <button type="button" id="signIn" class="btn btn-lg btn-default nextBtn next5" onClick="signIn()">sign in</button>
+            <br /><br />
+            <span style="font-size:18px; color: #fff">don't have account? <a href="./signup.html" id="signupLink" class="text-success">Sign up</a></span>
+        </div>
+
+
+        <!-- copyright section -->
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="text-center" id="copywrite" style="font-size:22px; font-weight:lighter; color:#fff; font-family: 'Montserrat', sans-serif;">@Copyrights.2018-19 All Rights Reserved by <span class="" style="color: #485460; font-family: 'Righteous', cursive; letter-spacing: 1px;">asan Foundation</span></p>
+            </div>
+        </div>
+
+
+
+    <!-- js file -->
+    <script src="../src/authentication.js"></script>
+    
+    <!-- scroll reveal -->
+    <script>
+        ScrollReveal({ duration: 1000 })
+        ScrollReveal().reveal('.next')
+        ScrollReveal().reveal('.next2', { delay: 500 })
+        ScrollReveal().reveal('#container', { delay: 1000 })
+        ScrollReveal().reveal('#img', { delay: 1400 })
+    </script>
+
+
+    <!-- bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

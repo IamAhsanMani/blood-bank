@@ -1,0 +1,298 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.home{
+    background : url(../images/bg.svg) no-repeat center center fixed ;
+    display: table;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.landing-text{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.landing-text h1{
+    text-transform: capitalize;
+    font-family: 'Righteous', cursive;
+    font-weight: 900;
+    font-size: 68px;
+    color: #fff
+}
+
+.landing-text h3{
+    text-transform: uppercase;
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+}
+
+.landing-text button{
+    background-color: #eb4d4b;
+    width: 20%;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 21px;
+    padding: 15px;
+    border: none;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+    transition: ease-in 0.3s
+}
+
+.container-fluid{
+    background-color: #1dd1a1;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.container-fluid h1{
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+.container-fluid button{
+    width: 20%;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    font-size: 21px;
+    padding: 21px;
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+    background-color: #eb4d4b;
+    transition: ease-in 0.3s
+}
+
+.home .landing-text button:hover,
+.container-fluid .next6:hover{
+    background-color: #3E4551;
+    border: none;
+}
+
+
+/* navbar */
+.navbar{
+    border-bottom: 8px solid #ff9f43;
+}
+
+.navbar a{
+    margin-top: 5px
+}
+
+.navbar .navbar-brand #doctor-name{
+    font-family: 'Righteous', cursive;
+    font-size: 38px;
+}
+
+.navbar .navbar-brand small{
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+    font-style: italic;
+}
+
+#profileName{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.inputInfo{
+    font-family: 'Poppins', sans-serif;
+}
+.navbar .collapse ul li a:hover{
+    text-decoration: none;
+    transition: ease-in 0.5s;
+    color: #ff7979 !important
+}
+
+
+    /* NAVBAR END */
+
+
+
+
+
+.padding{
+    padding: 80px 0;
+}
+
+.card-body h5{
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
+    color:#263238;
+}
+
+.card-body .text-center .fab {
+    font-size:19px;
+    color: #949494;
+    padding: 5px;
+}
+
+.padding .container #hr5{
+    background-color: #ffbb33; height: 2px; width: 17%;
+}
+
+/* fb icon */
+.card-body .text-center a .fa-facebook-f:hover{
+    color:#3B5998;
+}
+
+/* twitter icon */
+.card-body .text-center a .fa-twitter:hover{
+    color:#1DA1F2;
+}
+
+/* google+ icon */
+.card-body .text-center a .fa-google-plus-g:hover{
+    color:#DB4437;
+}
+
+/* in icon */
+.card-body .text-center a .fa-linkedin-in:hover{
+    color:#0077B5;
+}
+
+footer{
+    width: 100%;
+    background-color: #1C2331 !important;
+    margin-left: 25%;
+    padding: 5% 5% 10%;
+    color:#fff;
+}
+
+.footer-font{
+    padding: 15px;
+    font-size:25px;
+    color:#fff;
+} 
+
+.footer-font:hover{
+    color:#D5D5D5;
+    text-decoration: none;
+}
+
+
+
+/* go to upper btn */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    background-color: #ddd;
+    width: 24px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #00000070;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(125deg, #0f2027, #203a43, #2c5364);
+    border-radius: 5px;
+}
+
+
+#goToBtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 15px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffb142;
+    line-height: 50px;
+    opacity: 0.7;
+    transition: ease-in 0.3s
+}
+
+#goToBtn:hover{
+    
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .landing-text h1, .container-fluid h1{
+        font-size: 55px
+    }
+
+    .landing-text h3{
+        font-size: 21px
+    }
+
+
+    .landing-text button{
+        width: 35%;
+    }
+
+    .container-fluid button{
+        width: 45%;
+    }
+
+    .padding .container #hr5{
+        width:48%;
+    }
+    #mine{
+       max-height: 242px 
+    }
+
+    #footerName{
+        font-size: 30px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #about{
+        font-size: 42px !important;
+    }
+
+    .navbar a{
+        margin-top: 5%
+    }
+
+    .navbar .navbar-brand #doctor-name{
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+
+    .a{
+        /* margin-left: 0% !important; */
+    }
+
+    .collapse .navbar-nav{
+        margin-top:15%
+    }
+
+    .collapse .navbar-nav li{
+        margin-top:5%
+    }
+
+    .navbar .navbar-brand small{
+        font-weight: normal;
+        font-size: 14px
+    }
+    #mine{
+        max-height: 375px 
+    }
+
+    #goToBtn{
+        right: 5px;
+    }
+
+}

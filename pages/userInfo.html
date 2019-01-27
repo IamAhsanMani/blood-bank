@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- css -->
+    <link rel="stylesheet" href="../css/userInfo.css">
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- sweetalert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:600|Montserrat|Poppins|Righteous|Ubuntu:500" rel="stylesheet">
+
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+
+    <title>Profile</title>
+</head>
+<body>
+        <nav id="top" class="navbar navbar-expand-lg navbar-light bg-light" style="padding-top: 20px;padding-bottom: 20px;background: linear-gradient(to left, #0f2027, #203a43, #2c5364)!important; border-bottom:#fc5c65 6px solid">
+            <a class="navbar-brand" id="header" href="#" style="line-height:15px"><span id="doctor-name"><span class="this1" style="color:#fff">asan</span> <span class="this2" style="color:#fc5c65">Foundation<sup><i class="far fa-registered" style="font-size:10px; color: #fff"></i></sup></span></span><small class="this3" style="color:#2ed573"><br />Save life...</small></a>
+            <button class="navbar-toggler" style="margin-top:15px; margin-bottom:15px;color: #fff !important;background-color: #fc5c65;border: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="a" onClick="goBack()" style="font-size: 18px; line-height: 70px; margin-left: 12px; color: #eccc68; cursor: pointer;"><i class="fas fa-home"></i>Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="" id="logoutBtn" style="font-size: 18px; line-height: 70px; margin-left: 12px; color: #eccc68; cursor: pointer;" onClick="logOut()"><i class="fas fa-sign-out-alt"></i>Logout</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+
+        <h3 id="h3" class="text-center">Account Information</h3>
+
+    <div class="container text-center">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <img class="this4" src="../images/user.png" id="userImg" alt="Profile Picture" title="profile Picture"/>
+                <br />
+                <h2 class="this5" id="userName">Happy User</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-flux thiss">
+        <div class="row">
+            <div class="col-sm-12 text-left">
+                <div class="personalHead this6">Occupation:</div>
+                <div class="spanDiv">
+                    <span id="userProfession" class="this7"></span>
+                </div>
+                
+            </div>
+
+            <div class="col-sm-12 text-left">
+                <div class="personalHead this8">Age:</div>
+                <div class="spanDiv">
+                    <span id="userAge"class="this9"></span>
+                </div>
+            </div>
+
+            <div class="col-sm-12 text-left">
+                <div class="personalHead this10">Mobile Number:</div>
+                <div class="spanDiv">
+                    <span id="userNum" class="this11"></span>
+                </div> 
+            </div>
+
+            <div class="col-sm-12 text-left">
+                    <div class="personalHead this12">Email:</div>
+                    <div class="spanDiv">
+                        <span id="userEmail" class="this13" style="text-transform:lowercase"></span>
+                    </div> 
+                </div>
+
+            <div class="col-sm-12 text-left">
+                <div class="personalHead this14">Address:</div>
+                <div class="spanDiv">
+                    <span id="userAddress" class="this15"></span>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+    <!-- go to top btn -->
+    <a id="goToBtn" href="#top"><i class="fas fa-arrow-up"></i></a>
+
+
+
+
+
+     <!-- scroll reveal -->
+     <script>
+        ScrollReveal({ duration: 1000 })
+        ScrollReveal().reveal('.navbar')
+        ScrollReveal().reveal('.this1', { delay: 500 })
+        ScrollReveal().reveal('.this2', { delay: 1000 })
+        ScrollReveal().reveal('.navbar-toggler', { delay: 1300 })
+        ScrollReveal().reveal('.this3', { delay: 1400 })
+        ScrollReveal().reveal('#h3', { delay: 1900 })
+        ScrollReveal().reveal('.this4', { delay: 2250 })
+        ScrollReveal().reveal('.this5', { delay: 2700 })
+        // ScrollReveal().reveal('.thiss', { delay: 1400 })
+        // ScrollReveal().reveal('.this7', { delay: 2900 })
+        // ScrollReveal().reveal('.this8', { delay: 2900 })
+        // ScrollReveal().reveal('.this9', { delay: 2900 })
+        // ScrollReveal().reveal('.this10', { delay: 2900 })
+        // ScrollReveal().reveal('.this11', { delay: 2900 })
+        // ScrollReveal().reveal('.this12', { delay: 2900 })
+        // ScrollReveal().reveal('.this13', { delay: 2900 })
+        // ScrollReveal().reveal('.this14', { delay: 2900 })
+        // ScrollReveal().reveal('.this15', { delay: 2900 })
+        // ScrollReveal().reveal('.this16', { delay: 4900 })
+        // ScrollReveal().reveal('.this3', { delay: 1400 })
+        // ScrollReveal().reveal('.this3', { delay: 1400 })
+        // ScrollReveal().reveal('.this3', { delay: 1400 })
+
+    </script>
+
+
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <!-- js file link-->
+    <script src="../src/userInfo.js"></script>
+    
+</body>
+</html>

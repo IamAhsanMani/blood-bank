@@ -1,0 +1,295 @@
+/* navbar */
+.navbar{
+    border-bottom: 8px solid #ff9f43;
+}
+
+.navbar a{
+    margin-top: 5px
+}
+.navbar .navbar-brand #doctor-name{
+    font-family: 'Righteous', cursive;
+    font-size: 38px;
+}
+
+.navbar .navbar-brand small{
+    font-family: 'Exo 2', sans-serif;
+    color: #fff;
+    font-style: italic;
+}
+
+#profileName{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.inputInfo{
+    font-family: 'Poppins', sans-serif;
+}
+
+#profileLink:hover{
+    text-decoration: none;
+}
+
+.navbar .collapse ul li a:hover{
+    text-decoration: none;
+    transition: ease-in 0.5s;
+    color: #fff !important
+}
+
+    /* NAVBAR END */
+
+
+
+    /* LOADER */
+
+    /* #loader{
+        display: block;
+        position: fixed;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #fff;
+        }
+            
+            
+    .container-flux .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+            
+    .container-flux .box span{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 6px;
+    }
+        
+    .s1{
+        animation:  s1  1s infinite;
+        background-color: #0097e6;
+    }
+        
+    .s2{
+        animation:  s2  1s infinite;
+        background-color: #e84118;
+    }
+        
+    .s3{
+        animation:  s3  1s infinite;
+        background-color: #4cd137;
+    }
+        
+    @keyframes s1{
+        25%{
+        transform: scale(1)
+    }
+        
+    50%{
+        transform: scale(1.2)
+    }
+        
+    75%{
+        transform: scale(1)
+    }
+        
+    100%{
+        transform: scale(1)
+    }
+    
+    }
+        
+    @keyframes s2{
+    25%{
+        transform: scale(1)
+    }
+    
+    50%{
+        transform: scale(1)
+    }
+    
+    75%{
+        transform: scale(1.2)
+    }
+    
+    100%{
+        transform: scale(1)
+    }
+    
+    }
+        
+    @keyframes s3{
+    25%{
+        transform: scale(1)
+    }
+    
+    50%{
+        transform: scale(1)
+    }
+    
+    75%{
+        transform: scale(1.2)
+    }
+    
+    100%{
+        transform: scale(1)
+    }
+    
+    }
+    
+        LOADER */
+
+
+/* go to upper btn */
+html{
+    scroll-behavior: smooth;
+}
+
+
+/* scroll bar */
+::-webkit-scrollbar{
+    background-color: #ddd;
+    width: 24px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #00000070;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(125deg, #0f2027, #203a43, #2c5364);
+    border-radius: 5px;
+}
+
+
+#goToBtn{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 15px;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #ffb142;
+    line-height: 50px;
+    opacity: 0.7;
+    transition: ease-in 0.3s
+}
+
+#goToBtn:hover{
+    
+    opacity: 1;
+}
+
+/* go to btn end */
+
+
+
+
+
+.container-flux{
+    overflow: auto
+}
+
+#h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 3%;
+    color: #57606f;
+    margin-top:5%;
+}
+
+
+#userImg{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #487eb0;
+    box-shadow:  0px 1px 15px #000
+}
+
+#userName{
+    margin-top: 3%;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    color: #40739e;
+    text-transform: capitalize;
+}
+
+.container-flux{
+    margin-top: 7%;
+}
+
+.personalHead{
+    border: 1px solid #a4b0be;
+    border-left: none;
+    border-right: none;
+    background-color: #f1f2f6;
+    color: #2f3542;
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+    padding: 10px 10px;
+    font-weight: 600
+}
+
+.spanDiv{
+    background-color:#ffffff;
+    padding: 40px 20px
+}
+.spanDiv span{
+    color: #487eb0;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .navbar a{
+        margin-top: 5%
+    }
+
+    .navbar .navbar-brand #doctor-name{
+        font-size: 28px;
+        letter-spacing: -1px;
+    }
+
+    #logoutBtn{
+        margin-left: 0% !important;
+    }
+
+    .collapse .navbar-nav{
+        margin-top:15%
+    }
+
+    .collapse .navbar-nav li{
+        margin-top:5%
+    }
+
+    .navbar .navbar-brand small{
+        font-weight: normal;
+        font-size: 14px
+    }
+    
+    #h3{
+        margin-top: 9%;
+        margin-bottom: 8%;
+        font-size: 20px;
+    }
+    .a{
+        margin-left: 0% !important;
+    }
+}

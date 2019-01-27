@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- sweetalert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:500|Exo+2:600|Montserrat|Poppins:500|Righteous|Ubuntu+Condensed|Ubuntu:500,700" rel="stylesheet">
+
+    <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+    <!-- bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- firebase
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script> -->
+    
+    <title>asan Foundation</title>
+</head>
+<body>
+    <nav id="top" class="navbar navbar-expand-lg navbar-light bg-light" style="padding-top: 20px;padding-bottom: 20px;background: linear-gradient(to left, #0f2027, #203a43, #2c5364)!important; border-bottom:#fc5c65 6px solid">
+        <a class="navbar-brand" id="header" href="#" style="line-height:15px"><span id="doctor-name"><span class="name1" style="color:#fff">asan</span> <span class="name2" style="color:#fc5c65">Foundation<sup><i class="far fa-registered" style="font-size:10px; color: #fff"></i></sup></span></span><small style="color:#2ed573" class="name3"><br />Save life...</small></a>
+        <button class="navbar-toggler" style="margin-top:15px; margin-bottom:15px;color: #fff !important;background-color: #fc5c65;border: none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="a" href="./pages/signup.html" style="font-size: 18px; line-height: 70px; margin-left: 12px; color: #fff; cursor: pointer;"><i class="fas fa-user-plus"></i> Sign up</a>
+            </li>
+            <li class="nav-item">
+                <a class="a" href="./pages/signin.html" style="font-size: 18px; line-height: 70px; margin-left: 12px; color: #fff; cursor: pointer;" onClick="logOut()"><i class="fas fa-sign-out-alt"></i> Sign in</a>
+            </li>
+        </ul>
+        </div>
+    </nav>
+
+    <div class="home">
+        <div class="landing-text">
+            <h1 class="next1">get involved</h1>
+            <br />
+            <h3 class="next2">join us to save a life!</h3>
+            <br />
+            <button class="btn btn-lg btn-info next3" onClick="joinUs()">join us!</button>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center next4">
+        <h1 class="next5">quick donation</h1>
+        <br />
+        <button class="btn btn-lg btn-default next6" onClick="donationBtn()">donate <i class="fas fa-tint"></i></button>
+    </div>
+
+    <!-- agent container -->
+    <div class="padding">
+        <div class="container text-center">
+            <h2 id="about" style="color:#212121;font-size: 60px;font-family: 'Ubuntu Condensed', sans-serif;">OUR MEMBERS</h2>
+            <hr id="hr5"/>
+            <p class="next7" style="font-size:21px; color:#949494; margin-top: 5%">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac tortor at tellus feugiat congue quis ut nunc.. ahsn is the best</p>
+            
+            <div class="row" style="margin-top:7%;">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow-none p-3 mb-5 bg-light rounded">
+                    <div class="card">
+                        <img class="card-img-top next8" src="./images/mine.jpg" id="mine" style="height:375px" alt="agent1" />
+                        <div class="card-body">
+                            <h5 class="next8">Ahsan Mani</h5>
+                            <p class="text-muted next8">Founder</p>
+
+                            <div class="text-center">
+                                <a href="https://web.facebook.com/AhsanMani.Official" target="_blank"><i class="fab fa-facebook-f q"></i></a>
+                                <a href="https://twitter.com/A_Mani_Official?fbclid=IwAR2xfiZx35qnwD0LQCBXOCyXjPLFcSoaBPNJmscZOdhQW7Rym88rAttpKGY" target="_blank"><i class="fab fa-twitter b"></i></a>
+                                <a href="https://plus.google.com/u/1/102686069973638510546" target="_blank"><i class="fab fa-google-plus-g c"></i></a>
+                                <a href="https://www.linkedin.com/in/ahsan-mani-b6839a154/" target="_blank"><i class="fab fa-linkedin-in d"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow-none p-3 mb-5 bg-light rounded">
+                    <div class="card">
+                        <img class="card-img-top next11" src="./images/men4.jpeg"  alt="agent2" />
+                        <div class="card-body">
+                            <h5 class="next11">Emma Connor</h5>
+                            <p class="text-muted next11">Creative Director</p>
+
+                            <div class="text-center">
+                                <a href="JavaScript:Void(0)"><i class="fab fa-facebook-f q"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-twitter b"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-google-plus-g c"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-linkedin-in d"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow-none p-3 mb-5 bg-light rounded">
+                    <div class="card">
+                        <img class="card-img-top next12" src="./images/men3.jpg" alt="agent1" />
+                        <div class="card-body">
+                            <h5 class="next12">John Piterson</h5>
+                            <p class="text-muted next12">Support Manager</p>
+
+                            <div class="text-center">
+                                <a href="JavaScript:Void(0)"><i class="fab fa-facebook-f q"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-twitter b"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-google-plus-g c"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-linkedin-in d"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 shadow-none p-3 mb-5 bg-light rounded">
+                    <div class="card">
+                        <img class="card-img-top next13" src="./images/men5.jpeg" alt="agent1" />
+                        <div class="card-body">
+                            <h5 class="next13">Karen Paren</h5>
+                            <p class="text-muted next13">Office Manager</p>
+
+                            <div class="text-center">
+                                <a href="JavaScript:Void(0)"><i class="fab fa-facebook-f q"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-twitter b"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-google-plus-g c"></i></a>
+                                <a href="JavaScript:Void(0)"><i class="fab fa-linkedin-in d"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>                    
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="container-fluid w-100 text-center next9">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3 class="next10">Contact Us</h3>
+                <br />
+                <h5 class="next14"><i class="fas fa-map-marker" style="color:#D5D5D5"></i> <span style="color:#D5D5D5">Address:</span> 20/F Green Road, Karachi, Pakistan</h5>
+                <h5 class="next15"><i class="fas fa-phone" style="color:#D5D5D5"></i> <span style="color:#D5D5D5">Phone:</span> +92 3XX-218519-X</h5>
+            </div>
+
+            <div class="col-sm-4">
+                <h3 class="next16">Connect</h3>
+                <a href="#" class="fab fa-facebook-f footer-font e"></a>
+                <a href="#" class="fab fa-twitter footer-font f"></a>
+                <a href="#" class="fab fa-google-plus-g footer-font g"></a>
+                <a href="#" class="fab fa-linkedin-in footer-font h"></a>
+            </div>
+
+            <div class="col-sm-4">
+                <h1 id="footerName" style="font-size:58px;font-family: 'Dosis', sans-serif; font-weight: 600"><span style="text-transform:lowercase; color: #feca57">asan</span> <span style="font-family: 'Ubuntu', sans-serif;">Foundation</span></h1>
+            </div>
+        </div>
+    </footer>
+
+    <!-- go to top btn -->
+    <a class="bn" id="goToBtn" href="#top"><i class="fas fa-arrow-up"></i></a>
+
+
+
+
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    
+
+    <!-- js file -->
+    <script src="./src/index.js"></script>
+
+    <!-- scroll reveal -->
+    <script>
+        ScrollReveal({ duration: 1000 })
+        ScrollReveal().reveal('.navbar')
+        ScrollReveal().reveal('.name1', { delay: 400 })
+        ScrollReveal().reveal('.name2', { delay: 800 })
+        ScrollReveal().reveal('.name3', { delay: 1200 })
+        ScrollReveal().reveal('.home', { delay: 1000 })
+		ScrollReveal().reveal('.next1', { delay: 1000 })
+        ScrollReveal().reveal('.next2', { delay: 1800 })
+        ScrollReveal().reveal('.next3', { delay: 2300 })
+        ScrollReveal().reveal('.next4', { delay: 1000 })
+        ScrollReveal().reveal('.next5', { delay: 1300 })
+        ScrollReveal().reveal('.next6', { delay: 1400 })
+        ScrollReveal().reveal('#about', { delay: 1000 })
+        ScrollReveal().reveal('#hr5', { delay: 1300 })
+        ScrollReveal().reveal('.next7', { delay: 1500 })
+        ScrollReveal().reveal('.row', { delay: 1500 })
+        ScrollReveal().reveal('.next8', { delay: 1200 })
+        ScrollReveal().reveal('.next11', { delay: 500 })
+        ScrollReveal().reveal('.next12', { delay: 500 })
+        ScrollReveal().reveal('.next13', { delay: 500 })
+        ScrollReveal().reveal('.q', { delay: 700 })
+        ScrollReveal().reveal('.b', { delay: 900 })
+        ScrollReveal().reveal('.c', { delay: 1100 })
+        ScrollReveal().reveal('.d', { delay: 1300 })
+        // footer
+        ScrollReveal().reveal('.next9', { delay: 500 })
+        ScrollReveal().reveal('.next10', { delay: 900 })
+        ScrollReveal().reveal('.next14', { delay: 1100 })
+        ScrollReveal().reveal('.next15', { delay: 1300 })
+        ScrollReveal().reveal('.next16', { delay: 1500 })
+        ScrollReveal().reveal('.e', { delay: 1700 })
+        ScrollReveal().reveal('.f', { delay: 1900 })
+        ScrollReveal().reveal('.g', { delay: 2100 })
+        ScrollReveal().reveal('.h', { delay: 2300 })
+        ScrollReveal().reveal('#footerName', { delay: 2800 })
+    </script>
+</body>
+</html>
